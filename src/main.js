@@ -37,6 +37,7 @@ async function nextImg() {
       const cards = document.querySelector(".cards");
 
       const article = document.createElement("article");
+      const figure = document.createElement("figure");
       const img = document.createElement("img");
       const button = document.createElement("button");
       const btnText = document.createTextNode("ADD");
@@ -49,7 +50,9 @@ async function nextImg() {
       img.classList.add("imgCats");
 
       article.classList.add("card");
-      article.appendChild(img);
+      figure.classList.add("imgContainer");
+      figure.appendChild(img);
+      article.appendChild(figure);
       article.appendChild(button);
 
       cards.appendChild(article);
@@ -154,6 +157,7 @@ async function favouritesCats() {
       const cards = document.querySelector(".cardsFavorites");
 
       const article = document.createElement("article");
+      const figure = document.createElement("figure");
       const img = document.createElement("img");
       const button = document.createElement("button");
       const btnText = document.createTextNode("DELETE");
@@ -166,9 +170,12 @@ async function favouritesCats() {
       img.src = element.image.url;
 
       img.classList.add("imgCats");
+      figure.classList.add("imgContainer");
+
 
       article.classList.add("card");
-      article.appendChild(img);
+      figure.appendChild(img);
+      article.appendChild(figure);
       article.appendChild(button);
 
       cards.appendChild(article);

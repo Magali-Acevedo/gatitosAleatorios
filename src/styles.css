@@ -31,7 +31,11 @@ body::-webkit-scrollbar-thumb {
     background-color:  var(--color-text);
 }
 
-
+.imgContainer {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
 .imgCats {
     width: 300px;
     min-height: 300px;
