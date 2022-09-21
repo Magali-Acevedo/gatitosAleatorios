@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./main.js"></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Mascotas aleatorias</title>
@@ -11,38 +16,60 @@
 <body>
 
     <h1>Mascotas Aleatorias</h1>
+    <span class="Error"></span>
+
     <section class="cardsSection">
 
-        <span class="Error"></span>
-
         <div class="cards">
-            <article class="card">
+           <!-- <article class="card">
 
-                <img id="imgCats1" alt="FOTO">
-                <button onclick="addFavourites()" class="btn-like">♥</button>
+                <img class="imgCats one"  alt="FOTO">
+                <button class="btn-like" id="btnOne">♥</button>
     
             </article>
     
             <article class="card">
     
-                <img id="imgCats2" alt="FOTO">
-                <button onclick="addFavourites()"  class="btn-like">♥</button>
+                <img class="imgCats two" alt="FOTO">
+                <button  class="btn-like" id="btnTwo">♥</button>
             </article>
     
             <article class="card">
     
-                <img id="imgCats3" alt="FOTO">
-                <button onclick="addFavourites()"  class="btn-like">♥</button>
-            </article>
+                <img class="imgCats three" alt="FOTO">
+                <button  class="btn-like" id="btnThree">♥</button>
+            </article> -->
         </div>
 
-       
-
-        <button class="btn-next" onclick="nextImg()">NEXT</button>
+        <button class="btn-next" onclick="nextImg()">NEXT ⟳</button>
 
     </section>
 
-   
+    <section class="uploadPhotoSection">
+        <article class="uploadPhotoContainer" >
+            <h3>Subi la foto de tu gatito</h3>
+            <br>
+            <form id="fileLoadingForm">
+                <input type="file" id="file" name="file">
+                <br>
+                <br>
+                <button type="button" class="btn" onclick="UploadCatPhoto()">CARGAR</button>
+            </form>
+        </article>
+
+
+    </section>
+
+    <section class="cardsSectionFav"> 
+        <h2>FAVORITOS ❤❤❤</h2>
+
+        <div class="cardsFavorites"></div>
+
+    </section>
+
+    <footer>
+        <span>Creado con ❤ por magali__acevedo</span>
+    </footer>
     
 </body>
 </html>
